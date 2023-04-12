@@ -3,6 +3,7 @@ type StepButton = {
   title: string;
   subtitle: string;
   active?: boolean;
+  onClick: () => void;
 };
 
 type StepButtonStyledProps = {

@@ -1,33 +1,20 @@
+import { useStore } from "../../store/useStore";
 import StepButton from "../StepButton";
+import { menus } from "./data";
 import * as Styled from "./styled";
 
 const Menu = () => {
-  const menus = [
-    {
-      title: "YOUR INFO",
-      step: "info",
-    },
-    {
-      title: "SELECT PLAN",
-      step: "plan",
-    },
-    {
-      title: "ADD-ONS",
-      step: "addons",
-    },
-    {
-      title: "SUMMARY",
-      step: "summary",
-    },
-  ];
+  const { step } = useStore();
+
   return (
     <Styled.Background>
-      {menus.map(({ title, step }, index) => (
+      {menus.map(({ title, stepName }, index) => (
         <StepButton
           stepNumber={index + 1}
           title={`STEP ${index + 1}`}
           subtitle={title}
-          active={step === "info"}
+          active={stepName === step}
+          onClick={() => console.log("dfs")}
         />
       ))}
     </Styled.Background>

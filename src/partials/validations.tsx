@@ -9,10 +9,11 @@ export const Validate = (
   schema
     .validate(values, { abortEarly: false })
     .then(() => {
+      console.log(values);
       return callback();
     })
     .catch((err: { inner: yup.ValidationError[] }) => {
-      err?.inner?.forEach((error) => {
+      return err?.inner?.forEach((error) => {
         setError(error.path, { message: `${error.message}` });
       });
     });
@@ -22,4 +23,10 @@ export const Step1Validation = yup.object({
   name: yup.string().required("Required field"),
   email: yup.string().required("Required field"),
   phoneNumber: yup.string().required("Required field"),
+});
+
+export const Step2Validation = yup.object({
+  plan: yup.object({
+    title: yup.string().required("Please, choose a plan."),
+  }),
 });

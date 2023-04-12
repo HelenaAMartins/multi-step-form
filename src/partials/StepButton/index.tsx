@@ -1,8 +1,14 @@
 import * as Styled from "./styled";
 
-const StepButton = ({ stepNumber, title, subtitle, active }: StepButton) => {
+const StepButton = ({
+  stepNumber,
+  title,
+  subtitle,
+  active,
+  ...props
+}: StepButton) => {
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper {...props}>
       <Styled.Number active={active}>{stepNumber}</Styled.Number>
       <Styled.Content>
         <Styled.StepTitle>{title}</Styled.StepTitle>

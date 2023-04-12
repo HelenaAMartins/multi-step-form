@@ -3,18 +3,30 @@ import { FormProvider, useForm } from "react-hook-form";
 import Step1 from "../Step1";
 import { Step1Validation } from "../validations";
 import * as Styled from "./styled";
+import { useStore } from "../../store/useStore";
+import Step2 from "../Step2";
 
 const Form = () => {
+  const { step } = useStore();
+
   const methods = useForm({
+    defaultValues: {
+      type: "monthly",
+    },
     resolver: yupResolver(Step1Validation),
   });
 
   const onSubmit = (data: any) => console.log(data);
 
+  const steps = {
+    info: <Step1 />,
+    plan: <Step2 />,
+  } as any;
+
   return (
     <FormProvider {...methods}>
       <Styled.FormWrapper onSubmit={methods.handleSubmit(onSubmit)}>
-        <Step1 />
+        {steps[step]}
       </Styled.FormWrapper>
     </FormProvider>
   );

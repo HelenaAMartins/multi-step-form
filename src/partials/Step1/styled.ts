@@ -13,3 +13,9 @@ export const InputsWrapper = styled.div`
   flex-direction: column;
   grid-gap: 1rem;
 `;
+
+export const ButtonsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`;

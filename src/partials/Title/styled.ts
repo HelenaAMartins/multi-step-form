@@ -14,6 +14,6 @@ export const Title = styled.h2`
 
 export const subTitle = styled.p`
   opacity: 0.3;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 `;

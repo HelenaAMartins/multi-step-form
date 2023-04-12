@@ -6,4 +6,7 @@ export const FormWrapper = styled.form`
   align-items: flex-start;
   width: 100%;
   grid-gap: 1.2rem;
+  height: 100%;
+  justify-content: space-between;
+  min-height: 600px;
 `;

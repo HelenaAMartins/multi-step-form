@@ -30,3 +30,5 @@ export const Step2Validation = yup.object({
     title: yup.string().required("Please, choose a plan."),
   }),
 });
+
+export const Step3Validation = yup.object({});

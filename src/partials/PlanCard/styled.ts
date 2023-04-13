@@ -33,6 +33,6 @@ export const Price = styled.h5`
 
 export const Discount = styled.span`
   font-size: 1rem;
-  color: #00254d;
+  color: #bd93f9;
   padding-top: 5px;
 `;

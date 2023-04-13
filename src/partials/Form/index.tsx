@@ -5,6 +5,7 @@ import { Step1Validation } from "../validations";
 import * as Styled from "./styled";
 import { useStore } from "../../store/useStore";
 import Step2 from "../Step2";
+import Step3 from "../Step3";
 
 const Form = () => {
   const { step } = useStore();
@@ -12,6 +13,7 @@ const Form = () => {
   const methods = useForm({
     defaultValues: {
       type: "monthly",
+      addons: [],
     },
     resolver: yupResolver(Step1Validation),
   });
@@ -21,6 +23,7 @@ const Form = () => {
   const steps = {
     info: <Step1 />,
     plan: <Step2 />,
+    addons: <Step3 />,
   } as any;
 
   return (

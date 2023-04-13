@@ -28,11 +28,7 @@ const Step2 = () => {
           title="Select your plan"
           subtitle="You have the option of monthly or yearly billing."
         />
-        {errors.plan?.title?.message && (
-          <Styled.ErrorMessage>
-            {errors.plan?.title?.message}
-          </Styled.ErrorMessage>
-        )}
+
         <Styled.CardsWrapper>
           {plans?.map(({ src, title, price }, index) => (
             <PlanCard
@@ -47,6 +43,11 @@ const Step2 = () => {
               active={plan?.title === title}
             />
           ))}
+          {errors.plan?.title?.message && (
+            <Styled.ErrorMessage>
+              {errors.plan?.title?.message}
+            </Styled.ErrorMessage>
+          )}
         </Styled.CardsWrapper>
 
         <Toggle />

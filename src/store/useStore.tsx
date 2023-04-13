@@ -7,6 +7,6 @@ type Store = {
 };
 
 export const useStore = create<Store>((set) => ({
-  step: "info",
+  step: "addons",
   changeStep: (stepValue: Step) => set(() => ({ step: stepValue })),
 }));

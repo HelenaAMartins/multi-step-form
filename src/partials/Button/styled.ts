@@ -8,9 +8,9 @@ export const Button = styled.button<ButtonStyledProps>`
   border: none;
   font-weight: 700;
   cursor: pointer;
-  background-color: ${({ secondary }) => (secondary ? "#7600bc" : "#00254d")};
+  background-color: ${({ secondary }) => (secondary ? "#7600bc" : "#e96977")};
 
   &:hover {
-    background-color: ${({ secondary }) => (secondary ? "#8a00c2" : "#003166")};
+    background-color: ${({ secondary }) => (secondary ? "#8a00c2" : "#d85b69")};
   }
 `;

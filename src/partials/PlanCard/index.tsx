@@ -6,8 +6,6 @@ const PlanCard = ({ src, title, price, onClick, active }: PlanCardProps) => {
 
   const { type } = watch();
 
-  console.log(type);
-
   return (
     <Styled.Box onClick={onClick} active={active}>
       <img src={`src/assets/${src}`} />

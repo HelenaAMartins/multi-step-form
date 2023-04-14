@@ -6,7 +6,7 @@ export const services = [
     price: 1,
   },
   {
-    id: "larger",
+    id: "storage",
     title: "Larger storage",
     subtitle: "Extra 1 TB of cloud save",
     price: 2,

@@ -7,15 +7,10 @@ import Title from "../Title";
 import { Step3Validation, Validate } from "../validations";
 import * as Styled from "./styled";
 import { services } from "./data";
-import { useState } from "react";
 
 const Step3 = () => {
   const { changeStep } = useStore();
-  const [addonList, setAddonList] = useState([]);
-
-  const { getValues, setError } = useFormContext<any>();
-
-  console.log(addonList);
+  const { getValues, setError } = useFormContext();
 
   return (
     <>
@@ -30,7 +25,6 @@ const Step3 = () => {
           title={title}
           subtitle={subtitle}
           price={price}
-          setAddonList={setAddonList}
         />
       ))}
       <Styled.ButtonsWrapper>

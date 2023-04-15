@@ -2,7 +2,7 @@ import { useFormContext } from "react-hook-form";
 import * as Styled from "./styled";
 
 const PlanCard = ({ src, title, price, onClick, active }: PlanCardProps) => {
-  const { watch, setValue } = useFormContext();
+  const { watch } = useFormContext();
 
   const { type } = watch();
 

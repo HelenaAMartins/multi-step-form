@@ -7,7 +7,6 @@ export const Wrapper = styled.button`
   grid-gap: 1.5rem;
   width: 100%;
   border: none;
-  cursor: pointer;
   background-color: transparent;
 `;
 

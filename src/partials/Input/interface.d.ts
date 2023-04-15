@@ -5,7 +5,7 @@ type InputProps = {
   label: string;
   name: string;
   placeholder: string;
-  error: any;
+  error: UseFormSetError;
   type: string;
   inputRef?: any;
   className?: string;

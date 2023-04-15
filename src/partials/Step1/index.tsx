@@ -5,6 +5,7 @@ import Title from "../Title";
 import { Step1Validation, Validate } from "../validations";
 import * as Styled from "./styled";
 import { useStore } from "../../store/useStore";
+import PhoneInput from "react-phone-number-input/input";
 
 const Step1 = () => {
   const { changeStep } = useStore();
@@ -14,6 +15,12 @@ const Step1 = () => {
     setError,
     control,
   } = useFormContext<Step1Errors>();
+
+  const phoneMask = (value: string) => {
+    const regex = /^[0-9]+$/;
+    const replacement = `+${value}`;
+    return value.replace(regex, replacement);
+  };
 
   return (
     <>
@@ -70,9 +77,9 @@ const Step1 = () => {
                 name="phoneNumber"
                 label="Phone Number"
                 error={errors?.phoneNumber}
-                placeholder="e.g. +55 11 980687353"
+                placeholder="e.g. +5511980687353"
                 type="text"
-                value={value}
+                value={value ? phoneMask(value) : ""}
                 onChange={(e) => {
                   onChange(e.target.value);
                   setError("phoneNumber", { message: "" });

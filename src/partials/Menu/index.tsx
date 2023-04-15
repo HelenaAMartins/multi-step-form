@@ -10,11 +10,11 @@ const Menu = () => {
     <Styled.Background>
       {menus.map(({ title, stepName }, index) => (
         <StepButton
+          key={`menu-${index}`}
           stepNumber={index + 1}
           title={`STEP ${index + 1}`}
           subtitle={title}
           active={stepName === step}
-          onClick={() => console.log("dfs")}
         />
       ))}
     </Styled.Background>

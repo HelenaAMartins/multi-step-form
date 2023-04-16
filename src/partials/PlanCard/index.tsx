@@ -8,7 +8,7 @@ const PlanCard = ({ src, title, price, onClick, active }: PlanCardProps) => {
 
   return (
     <Styled.Box onClick={onClick} active={active}>
-      <img src={`src/assets/${src}`} />
+      <img src={`/${src}`} />
       <Styled.Content>
         <Styled.Title>{title}</Styled.Title>
         <Styled.Price>

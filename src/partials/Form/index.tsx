@@ -1,4 +1,5 @@
 import { useStore } from "../../store/useStore";
+import DataTable from "../DataTable";
 import Step1 from "../Step1";
 import Step2 from "../Step2";
 import Step3 from "../Step3";
@@ -15,6 +16,7 @@ const Form = (props: any) => {
     addons: <Step3 />,
     summary: <Step4 />,
     thanks: <StepThankYou />,
+    dataTable: <DataTable />,
   };
 
   return <Styled.FormWrapper {...props}>{steps[step]}</Styled.FormWrapper>;

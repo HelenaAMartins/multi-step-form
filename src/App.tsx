@@ -21,7 +21,7 @@ function App() {
 
   const onSubmit = (data: any) => {
     changeStep("thanks");
-    console.log(data);
+    console.log(data, "data");
   };
 
   return (

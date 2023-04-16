@@ -2,9 +2,7 @@ import { useStore } from "../../store/useStore";
 import BackButton from "../BackButton";
 import Button from "../Button";
 import Title from "../Title";
-
 import SummaryBox from "../SummaryBox";
-import * as Styled from "./styled";
 import ButtonsBottomWrapper from "../ButtonsBottomWrapper";
 import ContentWrapper from "../ContentWrapper";
 
@@ -24,7 +22,7 @@ const Step4 = () => {
 
       <ButtonsBottomWrapper>
         <BackButton onClick={() => changeStep("addons")}>Go back</BackButton>
-        <Button text="Next Step" type="submit" />
+        <Button text="Confirm" type="submit" secondary />
       </ButtonsBottomWrapper>
     </>
   );

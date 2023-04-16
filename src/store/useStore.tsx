@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-type Step = "info" | "plan" | "addons" | "summary" | "thanks";
+type Step = "info" | "plan" | "addons" | "summary" | "thanks" | "dataTable";
 type Store = {
   step: Step;
   changeStep: (value: Step) => void;

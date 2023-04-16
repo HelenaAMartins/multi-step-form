@@ -55,7 +55,8 @@ const SummaryBox = () => {
           Total ({type === "monthly" ? "per month" : "per year"})
         </Styled.Total>
         <Styled.TotalPrice>
-          +${type === "monthly" ? totalPrice : totalPrice * 10}
+          +${type === "monthly" ? totalPrice : totalPrice * 10}/
+          {type === "monthly" ? "mo" : "yr"}
         </Styled.TotalPrice>
       </Styled.TotalWrapper>
     </Styled.Wrapper>

@@ -6,6 +6,8 @@ import { Step1Validation, Validate } from "../validations";
 import * as Styled from "./styled";
 import { useStore } from "../../store/useStore";
 import PhoneInput from "react-phone-number-input/input";
+import ButtonsBottomWrapper from "../ButtonsBottomWrapper";
+import ContentWrapper from "../ContentWrapper";
 
 const Step1 = () => {
   const { changeStep } = useStore();
@@ -24,7 +26,7 @@ const Step1 = () => {
 
   return (
     <>
-      <Styled.Wrapper>
+      <ContentWrapper>
         <Title
           title="Personal Info"
           subtitle="Please, provide your name, email address and phone number."
@@ -88,8 +90,8 @@ const Step1 = () => {
             )}
           />
         </Styled.InputsWrapper>
-      </Styled.Wrapper>
-      <Styled.ButtonsWrapper>
+      </ContentWrapper>
+      <ButtonsBottomWrapper justify="flex-end">
         <Button
           text="Next Step"
           type="button"
@@ -99,7 +101,7 @@ const Step1 = () => {
             )
           }
         />
-      </Styled.ButtonsWrapper>
+      </ButtonsBottomWrapper>
     </>
   );
 };

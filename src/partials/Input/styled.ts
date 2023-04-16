@@ -11,12 +11,15 @@ export const LabelWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-  font-size: 1.2rem;
+  font-size: 1rem;
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const InputField = styled.input<StyledInputProps>`
   padding: 1rem 0.8rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
   border-radius: 8px;
   border: 1px solid ${({ hasError }) => (hasError ? "#ff5555" : "#ccc")};
   width: 100%;
@@ -24,9 +27,17 @@ export const InputField = styled.input<StyledInputProps>`
   &:focus {
     border: 1px solid blue;
   }
+
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const ErrorMessage = styled.span`
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #ff5555;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;

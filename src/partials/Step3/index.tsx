@@ -5,8 +5,9 @@ import BackButton from "../BackButton";
 import Button from "../Button";
 import Title from "../Title";
 import { Step3Validation, Validate } from "../validations";
-import * as Styled from "./styled";
 import { services } from "./data";
+import ButtonsBottomWrapper from "../ButtonsBottomWrapper";
+import ContentWrapper from "../ContentWrapper";
 
 const Step3 = () => {
   const { changeStep } = useStore();
@@ -14,20 +15,22 @@ const Step3 = () => {
 
   return (
     <>
-      <Title
-        title="Pick add-ons"
-        subtitle="Add-ons help enhance your gaming experience."
-      />
-      {services.map(({ id, title, subtitle, price }) => (
-        <AddOnBox
-          key={id}
-          id={id}
-          title={title}
-          subtitle={subtitle}
-          price={price}
+      <ContentWrapper gap="1rem">
+        <Title
+          title="Pick add-ons"
+          subtitle="Add-ons help enhance your gaming experience."
         />
-      ))}
-      <Styled.ButtonsWrapper>
+        {services.map(({ id, title, subtitle, price }) => (
+          <AddOnBox
+            key={id}
+            id={id}
+            title={title}
+            subtitle={subtitle}
+            price={price}
+          />
+        ))}
+      </ContentWrapper>
+      <ButtonsBottomWrapper>
         <BackButton onClick={() => changeStep("plan")}>Go back</BackButton>
         <Button
           text="Next Step"
@@ -38,7 +41,7 @@ const Step3 = () => {
             )
           }
         />
-      </Styled.ButtonsWrapper>
+      </ButtonsBottomWrapper>
     </>
   );
 };

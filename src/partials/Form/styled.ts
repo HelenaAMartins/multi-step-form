@@ -8,5 +8,9 @@ export const FormWrapper = styled.form`
   grid-gap: 1.2rem;
   height: 100%;
   justify-content: space-between;
-  min-height: 600px;
+  min-height: 85vh;
+
+  @media (min-width: 768px) {
+    min-height: 600px;
+  }
 `;

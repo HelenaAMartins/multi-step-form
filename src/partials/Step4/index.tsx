@@ -5,23 +5,27 @@ import Title from "../Title";
 
 import SummaryBox from "../SummaryBox";
 import * as Styled from "./styled";
+import ButtonsBottomWrapper from "../ButtonsBottomWrapper";
+import ContentWrapper from "../ContentWrapper";
 
 const Step4 = () => {
   const { changeStep } = useStore();
 
   return (
     <>
-      <Title
-        title="Finishing up"
-        subtitle="Double-check everything looks OK before confirming."
-      />
+      <ContentWrapper gap="2rem">
+        <Title
+          title="Finishing up"
+          subtitle="Double-check everything looks OK before confirming."
+        />
 
-      <SummaryBox />
+        <SummaryBox />
+      </ContentWrapper>
 
-      <Styled.ButtonsWrapper>
+      <ButtonsBottomWrapper>
         <BackButton onClick={() => changeStep("addons")}>Go back</BackButton>
         <Button text="Next Step" type="submit" />
-      </Styled.ButtonsWrapper>
+      </ButtonsBottomWrapper>
     </>
   );
 };

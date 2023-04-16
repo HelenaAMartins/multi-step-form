@@ -8,6 +8,8 @@ import { Step2Validation, Validate } from "../validations";
 import { plans } from "./data";
 import Toggle from "../Toggle";
 import BackButton from "../BackButton";
+import ButtonsBottomWrapper from "../ButtonsBottomWrapper";
+import ContentWrapper from "../ContentWrapper";
 
 const Step2 = () => {
   const { changeStep } = useStore();
@@ -23,7 +25,7 @@ const Step2 = () => {
 
   return (
     <>
-      <Styled.Wrapper>
+      <ContentWrapper>
         <Title
           title="Select your plan"
           subtitle="You have the option of monthly or yearly billing."
@@ -51,20 +53,22 @@ const Step2 = () => {
         </Styled.CardsWrapper>
 
         <Toggle />
-      </Styled.Wrapper>
+      </ContentWrapper>
 
-      <Styled.ButtonsWrapper>
-        <BackButton onClick={() => changeStep("info")}>Go back</BackButton>
-        <Button
-          text="Next Step"
-          type="button"
-          onClick={() =>
-            Validate(Step2Validation, getValues(), setError, () =>
-              changeStep("addons")
-            )
-          }
-        />
-      </Styled.ButtonsWrapper>
+      <ButtonsBottomWrapper>
+        <>
+          <BackButton onClick={() => changeStep("info")}>Go back</BackButton>
+          <Button
+            text="Next Step"
+            type="button"
+            onClick={() =>
+              Validate(Step2Validation, getValues(), setError, () =>
+                changeStep("addons")
+              )
+            }
+          />
+        </>
+      </ButtonsBottomWrapper>
     </>
   );
 };

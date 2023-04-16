@@ -8,7 +8,7 @@ const Toggle = () => {
 
   return (
     <Styled.Wrapper>
-      <Styled.Type active={type === "monthly"}>Montly</Styled.Type>
+      <Styled.Type active={type === "monthly"}>Monthly</Styled.Type>
       <Styled.ToggleWrapper>
         <Styled.Input
           type="checkbox"

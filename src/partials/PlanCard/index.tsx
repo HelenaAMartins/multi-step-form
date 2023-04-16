@@ -9,12 +9,14 @@ const PlanCard = ({ src, title, price, onClick, active }: PlanCardProps) => {
   return (
     <Styled.Box onClick={onClick} active={active}>
       <img src={`src/assets/${src}`} />
-      <Styled.Title>{title}</Styled.Title>
-      <Styled.Price>
-        ${type === "monthly" ? price : price * 10}/
-        {type === "monthly" ? "mo" : "yr"}
-      </Styled.Price>
-      {type === "yearly" && <Styled.Discount>2 months free</Styled.Discount>}
+      <Styled.Content>
+        <Styled.Title>{title}</Styled.Title>
+        <Styled.Price>
+          ${type === "monthly" ? price : price * 10}/
+          {type === "monthly" ? "mo" : "yr"}
+        </Styled.Price>
+        {type === "yearly" && <Styled.Discount>2 months free</Styled.Discount>}
+      </Styled.Content>
     </Styled.Box>
   );
 };

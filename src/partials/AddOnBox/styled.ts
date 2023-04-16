@@ -3,17 +3,25 @@ import styled from "styled-components";
 export const Box = styled.label`
   display: grid;
   width: 100%;
-  grid-template-columns: 40px auto 5.5rem;
-  font-size: 1.2rem;
-  padding: 1rem;
+  grid-template-columns: 20px auto 3rem;
+  font-size: 1rem;
+  padding: 0.5rem;
   align-items: center;
   border-radius: 0.4rem;
   border: 1px solid #ccc;
-  grid-gap: 20px;
+  grid-gap: 10px;
   transition: all 0.5s;
+  min-height: 80px;
 
   &:hover {
     border-color: #bd93f9;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+    padding: 1rem;
+    grid-gap: 20px;
+    grid-template-columns: 40px auto 5.5rem;
   }
 `;
 
@@ -45,9 +53,9 @@ export const Check = styled.input`
 `;
 
 export const Ticked = styled.div`
-  padding: 5px;
-  width: 25px;
-  height: 25px;
+  padding: 2px;
+  width: 20px;
+  height: 20px;
   display: block;
   pointer-events: none;
 
@@ -61,15 +69,37 @@ export const Ticked = styled.div`
     opacity: 0;
     fill: #fff;
   }
+
+  @media (min-width: 768px) {
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 export const Title = styled.p`
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Subtitle = styled.span`
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: 300;
   opacity: 0.4;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+`;
+
+export const Price = styled.span`
+  font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 `;

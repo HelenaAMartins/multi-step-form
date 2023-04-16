@@ -1,4 +1,4 @@
-import { Controller, useFormContext } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 import * as Styled from "./styled";
 
 const AddOnBox = ({ id, title, subtitle, price }: AddOnBoxProps) => {
@@ -28,7 +28,9 @@ const AddOnBox = ({ id, title, subtitle, price }: AddOnBoxProps) => {
         <Styled.Title>{title}</Styled.Title>
         <Styled.Subtitle>{subtitle}</Styled.Subtitle>
       </Styled.Description>
-      +${finalPrice}/{type === "monthly" ? "mo" : "yr"}
+      <Styled.Price>
+        +${finalPrice}/{type === "monthly" ? "mo" : "yr"}
+      </Styled.Price>
     </Styled.Box>
   );
 };

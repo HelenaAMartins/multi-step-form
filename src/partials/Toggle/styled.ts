@@ -12,9 +12,13 @@ export const Wrapper = styled.div`
 `;
 
 export const Type = styled.span<TypeStyleProps>`
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: ${({ active }) => (active ? "#00254d" : "#ccc")};
   font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const ToggleWrapper = styled.span`

@@ -9,7 +9,7 @@ import Form from "./partials/Form";
 import { useStore } from "./store/useStore";
 
 function App() {
-  const { changeStep } = useStore();
+  const { changeStep, step } = useStore();
 
   const methods = useForm({
     defaultValues: {
@@ -21,14 +21,14 @@ function App() {
 
   const onSubmit = (data: any) => {
     changeStep("thanks");
-    console.log(data, "data");
+    console.log(data);
   };
 
   return (
     <div className="App">
       <Container>
         <FormProvider {...methods}>
-          <Menu />
+          {step !== "dataTable" && <Menu />}
           <Content>
             <Form onSubmit={methods.handleSubmit(onSubmit)} />
           </Content>

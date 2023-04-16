@@ -24,7 +24,7 @@ export const Step1Validation = yup.object({
     .string()
     .email("Email should be a valid email")
     .required("Required field"),
-  phoneNumber: yup.string().required("Required field"),
+  phone: yup.string().required("Required field"),
 });
 
 export const Step2Validation = yup.object({

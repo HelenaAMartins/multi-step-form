@@ -71,19 +71,19 @@ const Step1 = () => {
           />
 
           <Controller
-            name="phoneNumber"
+            name="phone"
             control={control}
             render={({ field: { onChange, value } }) => (
               <Input
-                name="phoneNumber"
+                name="phone"
                 label="Phone Number"
-                error={errors?.phoneNumber}
+                error={errors?.phone}
                 placeholder="e.g. +5511980687353"
                 type="text"
                 value={value ? phoneMask(value) : ""}
                 onChange={(e) => {
                   onChange(e.target.value);
-                  setError("phoneNumber", { message: "" });
+                  setError("phone", { message: "" });
                 }}
               />
             )}

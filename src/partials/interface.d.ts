@@ -2,7 +2,7 @@ type Values = {
   addons: Object;
   email: string;
   name: string;
-  phoneNumber: string;
+  phone: string;
   plan: {
     title: string;
     price: number;

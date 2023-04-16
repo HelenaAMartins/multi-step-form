@@ -6,6 +6,7 @@ export const Wrapper = styled.button`
   width: 100%;
   border: none;
   background-color: transparent;
+  color: #fff;
 
   @media (min-width: 768px) {
     justify-content: start;

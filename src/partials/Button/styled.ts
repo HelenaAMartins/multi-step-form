@@ -7,6 +7,7 @@ export const Button = styled.button<ButtonStyledProps>`
   transition: all 0.5s;
   border: none;
   font-weight: 700;
+  color: #fff;
   cursor: pointer;
   background-color: ${({ secondary }) => (secondary ? "#7600bc" : "#e96977")};
 

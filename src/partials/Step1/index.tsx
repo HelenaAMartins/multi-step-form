@@ -5,7 +5,6 @@ import Title from "../Title";
 import { Step1Validation, Validate } from "../validations";
 import * as Styled from "./styled";
 import { useStore } from "../../store/useStore";
-import PhoneInput from "react-phone-number-input/input";
 import ButtonsBottomWrapper from "../ButtonsBottomWrapper";
 import ContentWrapper from "../ContentWrapper";
 

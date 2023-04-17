@@ -18,7 +18,7 @@ const SummaryBox = () => {
 
   const totalPrice =
     addonList?.map(({ price }) => price)?.reduce((a, b) => a + b, 0) +
-    plan?.price;
+    (type === "monthly" ? plan?.price : plan?.price * 10);
 
   return (
     <Styled.Wrapper>
@@ -41,8 +41,7 @@ const SummaryBox = () => {
             <Styled.AddonLineWrapper key={`summary-addon-${title}`}>
               <Styled.AddonTitle>{title}</Styled.AddonTitle>
               <Styled.AddonPrice>
-                +${type === "monthly" ? price : price * 10}/
-                {type === "monthly" ? "mo" : "yr"}
+                +${price}/{type === "monthly" ? "mo" : "yr"}
               </Styled.AddonPrice>
             </Styled.AddonLineWrapper>
           ))
@@ -55,8 +54,7 @@ const SummaryBox = () => {
           Total ({type === "monthly" ? "per month" : "per year"})
         </Styled.Total>
         <Styled.TotalPrice>
-          +${type === "monthly" ? totalPrice : totalPrice * 10}/
-          {type === "monthly" ? "mo" : "yr"}
+          +${totalPrice}/{type === "monthly" ? "mo" : "yr"}
         </Styled.TotalPrice>
       </Styled.TotalWrapper>
     </Styled.Wrapper>
